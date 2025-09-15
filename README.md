@@ -85,7 +85,7 @@ If using PostgreSQL, create a DB and configure credentials in `workshop_portal/s
 
 ---
 
-## Screenshots (Before/After)
+## Screenshots
 Screenshots are stored in `docs/screenshots/`.
 
 Drive Link: https://drive.google.com/drive/folders/1a4-7JdKosfNAmLFU8FVJLLCZOlMH33z_?usp=sharing
