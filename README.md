@@ -90,14 +90,3 @@ Screenshots are stored in `docs/screenshots/`.
 
 Drive Link: https://drive.google.com/drive/folders/1a4-7JdKosfNAmLFU8FVJLLCZOlMH33z_?usp=sharing
 
----
-
-## Submission
-- Push your changes to a public GitHub repository (fork or new repo).
-- Ensure progressive commits with clear messages.
-- Email the repository link to pythonsupport@fossee.in.
-
----
-
-## Notes on Originality
-Changes prioritize maintainability and incremental improvements. The code is intentionally minimal, readable, and respectful of the existing architecture.
