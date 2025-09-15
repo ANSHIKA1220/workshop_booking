@@ -1,7 +1,23 @@
 {% extends 'workshop_app/base.html' %}
+{% load custom_filters %}
 
 {% block title %}
     Login
+{% endblock %}
+
+{% block hero %}
+    <section class="container mb-4">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <h1 class="display-6">Book and manage FOSSEE workshops with ease</h1>
+                <p class="text-muted">Sign in to propose workshops, track statuses, and collaborate with instructors. New here? Create an account in seconds.</p>
+                <div class="d-flex gap-2">
+                    <a href="{% url 'workshop_app:register' %}" class="btn btn-success me-2">Create an account</a>
+                    <a href="{% url 'statistics_app:public' %}" class="btn btn-outline-secondary">View statistics</a>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}
 
 {% block content %}
@@ -16,31 +32,27 @@
                             {% for field in form %}
                                 {% for error in field.errors %}
                                     <div class="alert alert-dismissible alert-danger">
-                                        <button type="button" class="close" data-dismiss="alert">
-                                            <i class="fa fa-close"></i>
-                                        </button>
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                         <strong>{{ error|escape }}</strong>
                                     </div>
                                 {% endfor %}
                             {% endfor %}
                             {% for error in form.non_field_errors %}
                                 <div class="alert alert-dismissible alert-danger">
-                                    <button type="button" class="close" data-dismiss="alert">
-                                        <i class="fa fa-close"></i>
-                                    </button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                     <strong>{{ error|escape }}</strong>
                                 </div>
                             {% endfor %}
                         {% endif %}
                         <div class="form-group">
                           <label for="id_username">Username</label>
-                          {{ form.username }}
+                          {{ form.username|add_class:"form-control" }}
                         </div>
                         <div class="form-group">
                           <label for="id_password">Password</label>
-                          {{ form.password }}
+                          {{ form.password|add_class:"form-control" }}
                         </div>
-                        <button type="submit" class="btn btn-primary">Sign in</button>
+                        <button type="submit" class="btn btn-primary w-100">Sign in</button>
                         </form>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="{% url 'workshop_app:register' %}">New around here? Sign up</a>

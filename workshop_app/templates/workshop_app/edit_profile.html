@@ -6,15 +6,16 @@
 
 {% block content %}
   <div class="container">
-    <form action="{{URL_ROOT}}/edit_profile/" method="post" >
+    <form action="{{URL_ROOT}}/edit_profile/" method="post" class="card p-3" novalidate>
     {% csrf_token %}
-      <center>
-        <table class="table table-bordered">
-          {{ form.as_table }}
-        </table>
-      </center>
-      <br>
-        <button class="btn btn-primary pull-right" type="submit">Save Profile</button>
+        <div class="table-responsive">
+          <table class="table table-bordered table-sm table-striped mb-3 align-middle">
+            {{ form.as_table }}
+          </table>
+        </div>
+        <div class="d-grid d-md-flex justify-content-md-end">
+          <button class="btn btn-primary w-100 w-md-auto" type="submit" aria-label="Save profile changes">Save Profile</button>
+        </div>
     </form>
   </div>
 {% endblock %}
