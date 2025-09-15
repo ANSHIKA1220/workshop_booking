@@ -88,19 +88,7 @@ If using PostgreSQL, create a DB and configure credentials in `workshop_portal/s
 ## Screenshots (Before/After)
 Screenshots are stored in `docs/screenshots/`.
 
-- Login page: Before → After
-- Register page: Before → After
-- Workshop list: Before → After
-
-References:
-```markdown
-![Login Before](docs/screenshots/login_before.png)
-![Login After](docs/screenshots/login_after.png)
-![Register Before](docs/screenshots/register_before.png)
-![Register After](docs/screenshots/register_after.png)
-![Workshop Types Before](docs/screenshots/types_before.png)
-![Workshop Types After](docs/screenshots/types_after.png)
-```
+Drive Link: https://drive.google.com/drive/folders/1a4-7JdKosfNAmLFU8FVJLLCZOlMH33z_?usp=sharing
 
 ---
 
