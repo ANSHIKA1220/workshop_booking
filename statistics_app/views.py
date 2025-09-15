@@ -111,6 +111,12 @@ def team_stats(request, team_id=None):
         team = teams.get(id=team_id)
     else:
         team = teams.first()
+    # Handle case when there are no teams configured yet
+    if not team:
+        messages.add_message(
+            request, messages.INFO, "No team is configured yet. Please create a team first."
+        )
+        return redirect(reverse("workshop_app:index"))
     if not team.members.filter(user_id=user.id).exists():
         messages.add_message(
             request, messages.INFO, "You are not added to the team"
